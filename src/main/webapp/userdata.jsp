@@ -1,8 +1,3 @@
-<%-- 
-    Document   : userdata
-    Created on : Aug 14, 2018, 11:38:13 AM
-    Author     : KALINDU
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
