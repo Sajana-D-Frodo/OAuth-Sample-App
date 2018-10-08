@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mycompany.oauthapp.servlet;
 
 import java.io.BufferedReader;
@@ -32,10 +28,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.json.simple.parser.JSONParser;
-/**
- *
- * @author KALINDU
- */
+
 public class OAuthCallbackListener extends HttpServlet {
 
  
@@ -49,8 +42,8 @@ public class OAuthCallbackListener extends HttpServlet {
             final String TOKEN_ENDPOINT = "https://graph.facebook.com/oauth/access_token";   
             final String GRANT_TYPE = "authorization_code";
             final String REDIRECT_URI = "https://localhost:8443/OAuthApp/callback";
-            final String CLIENT_ID = "1789938591061725";
-            final String CLIENT_SECRET = "1e4e5fdf232feea13b23aa4760e42923";
+            final String CLIENT_ID = "2226000597678052";
+            final String CLIENT_SECRET = "f9cfc064c00394b9b4a28b3f2df31814";
             // Generate POST request
             HttpPost httpPost = new HttpPost(TOKEN_ENDPOINT + "?grant_type=" + URLEncoder.encode(GRANT_TYPE,StandardCharsets.UTF_8.name()) + "&code=" + URLEncoder.encode(authorizationCode,StandardCharsets.UTF_8.name()) + "&redirect_uri=" + URLEncoder.encode(REDIRECT_URI,StandardCharsets.UTF_8.name()) + "&client_id=" + URLEncoder.encode(CLIENT_ID,StandardCharsets.UTF_8.name()));
             String clientCredentials = CLIENT_ID + ":" + CLIENT_SECRET;
@@ -119,16 +112,7 @@ public class OAuthCallbackListener extends HttpServlet {
             User me = fbclient.fetchObject("me", User.class);
             String name = me.getName();
             String id = me.getId();
-            
-            /*  
-            Following commented code is to update facebok status im not sure if its working :)
-                String url ="http://graph.facebook.com/me/feed";
-                String msg = "Graph API Test";
-                HttpPost httpPost2 = new HttpPost(url + "?message=" +URLEncoder.encode(msg,StandardCharsets.UTF_8.name()));
-                httpPost2.addHeader("Authorization", "Bearer " + accessToken);
-                HttpClient httpClient2 = HttpClients.createDefault();
-                httpClient2.execute(httpPost2);
-            */
+
             request.setAttribute("UserName",name);
             request.setAttribute("UserId",id);
             request.setAttribute("friendsCount",friendsCount);
