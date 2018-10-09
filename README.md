@@ -8,7 +8,7 @@ Get your OAuth application registered in Facebook Developer account and obtain A
 
 This has following code.
 
-final String REDIRECT_URI = "https://localhost:8443/OAuthApp/callback"; final String CLIENT_ID = "1789938591061725"; final String CLIENT_SECRET = "1e4e5fdf232feea13b23aa4760e42923";
+final String REDIRECT_URI = "https://localhost:8443/OAuthApp/callback"; final String CLIENT_ID = "2226000597678052"; final String CLIENT_SECRET = "f9cfc064c00394b9b4a28b3f2df31814";
 
 Put your App ID, App Secret and the correct Redirect Uri in above.
 
@@ -16,7 +16,7 @@ Put your App ID, App Secret and the correct Redirect Uri in above.
 
 This has following code.
 
-var appid = "1789938591061725"; var redirecturi = "https://localhost:8443/OAuthApp/callback";
+var appid = "2226000597678052"; var redirecturi = "https://localhost:8443/OAuthApp/callback";
 
 Put your App ID and Redirect Uri above
 
