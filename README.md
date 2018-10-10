@@ -24,4 +24,4 @@ After the above changes, build the project with Maven. (eg: mvn clean install). 
 
 You need to configure HTTPS on your server in order to run this application.
 
-For more details about message flow please visit my blog post - 
+For more details about message flow please visit my blog post - https://sajanadfrodo.blogspot.com/2018/10/oauth-20-authorization-code-grant.html
